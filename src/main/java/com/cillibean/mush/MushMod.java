@@ -1,5 +1,6 @@
-package com.example.examplemod;
+package com.cillibean.mush;
 
+import com.cillibean.mush.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,13 +20,14 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("examplemod")
-public class ExampleMod
+@Mod(MushMod.MODID)
+public class MushMod
 {
+    public static final String MODID = "mush";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ExampleMod() {
+    public MushMod() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -37,6 +39,8 @@ public class ExampleMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        RegistryHandler.init();
     }
 
     private void setup(final FMLCommonSetupEvent event)

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx ",
+    "xx ",
+    "   "
+  ],
+  "key": {
+    "x": {
+      "item": "mush:mycelium_brick"
+    }
+  },
+  "result": {
+    "item": "mush:mycelium_brick_block",
+    "count": 1
+  }
+}

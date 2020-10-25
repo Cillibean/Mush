@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "mush:block/mycelium_brick_block" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mush:hyphae"
+  },
+  "result": "mush:mycelium_brick",
+  "experience": 0.7,
+  "cookingtime": 200
+}
